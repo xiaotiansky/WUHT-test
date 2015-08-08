@@ -5,13 +5,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var todos = require('./routes/todos');
-var cloud = require('./cloud');
+//var cloud = require('./cloud');
 
 var app = express();
 
 // 设置 view 引擎
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'html');
+app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 // 加载云代码方法
